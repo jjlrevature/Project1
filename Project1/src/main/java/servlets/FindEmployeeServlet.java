@@ -50,25 +50,7 @@ public class FindEmployeeServlet extends HttpServlet implements EmployeeDAO, Ser
 	
 	@Override
 	public void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-//		System.out.println("/user GET pinged");
-//		Employee queriedEmployee = new Employee(null, null);
-//		
-//		queriedEmployee.setUsername(req.getParameter("username"));
-//		queriedEmployee.setPassword(req.getParameter("password"));
-//		
-//		Employee returnedEmployee = null;
-//		try {
-//			returnedEmployee = login(queriedEmployee);
-//		} catch (SQLException e) {
-//			// TODO Auto-generated catch block
-//			e.printStackTrace();
-//		}		
-//		resp.setContentType("application/json");
-//		ObjectMapper om = new ObjectMapper();
-//		// TODO Auto-generated method stub
-//		String jsonEmp = om.writeValueAsString(returnedEmployee);
-//		resp.getWriter().print(jsonEmp);
-//		
+
 	}
 	
 	@Override
@@ -93,7 +75,7 @@ public class FindEmployeeServlet extends HttpServlet implements EmployeeDAO, Ser
 		
 		
 
-//		returnedEmployee.setEmpTickets(null);
+		returnedEmployee.getEmpTickets();
 //		SimpleModule module = new SimpleModule();
 //		module.addSerializer(Employee.class, new EmployeeSerializer());
 //		om.registerModule(module);
@@ -114,8 +96,8 @@ public class FindEmployeeServlet extends HttpServlet implements EmployeeDAO, Ser
 			Employee emp = session.find(Employee.class, 1);
 			// employee.getEmployeeID()
 			//System.out.println(emp.getEmpTickets());
-			//logger.info("user returned from getUser");
-			//emp.getEmpTickets();			
+//			logger.info("user returned from getUser");
+			System.out.println(emp.getEmpTickets());			
 			e = emp;
 			return e;
 		// TODO Auto-generated method stub
