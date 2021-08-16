@@ -1,0 +1,10 @@
+<div data-augmented-ui="t-clip-x r-clip b-clip-x l-clip border" class="userLogin">
+    <h2>Please Login</h2>
+    <form (ngSubmit)="onSubmit(employeeForm)" #employeeForm="ngForm" novalidate >
+      <label for="Username">Username</label>
+      <input  name="username" type="text" ngModel="employeeModel.username">
+      <label for="empid">Employee ID</label>
+      <input name="empid" type="number" ngModel="employeeModel.password"><br>
+      <button type="submit">Login</button>
+    </form>
+  </div>
